@@ -63,4 +63,16 @@ document.getElementById('bookingForm').addEventListener('submit', function (e) {
   sendToTelegram(message);
 });
 
-
+// ไม่ให้หน้าจอซูม
+document.addEventListener('focusin', function(e) {
+    // ป้องกันการซูมเมื่อ focus บน input หรือ textarea
+    if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+      document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+    }
+  });
+  
+  document.addEventListener('focusout', function(e) {
+    // คืนค่าการตั้งค่าเมื่อ focus ออกจาก input หรือ textarea
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1');
+  });
+  
