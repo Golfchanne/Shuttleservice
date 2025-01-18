@@ -8,8 +8,8 @@
 </head>
 <body>
   <header>
-   
-    <h1>บริการรถรับ-ส่ง ออนไลน์</h1>
+    <img src="img/โลโก้เว็บไซต์.png" alt="โลโก้เว็บไซต์" class="logo">
+    <h1>บริการรถรับ-ส่ง เรียกง่าย สะดวกสบาย</h1>
   </header>
   <main>
     <form id="booking-form">
@@ -25,29 +25,60 @@
         <label for="pickup-location">เลือกจุดไปรับ:</label>
         <select id="pickup-location" name="pickup-location" required>
           <option value="" disabled selected>เลือกจุดไปรับ</option>
-          <option value="สถานีรถไฟ">อาคารเรียนรวม C5</option>
-          <option value="สนามบิน">อาคารปฏิบัติการ S1</option>
-          <option value="โรงแรม">ศูนย์บรรณสารและสื่อการศึกษา (ห้องสมุด)</option>
-          <option value="โรงแรม">ศูนย์บริการเทคโนโลยีสารสนเทศ</option>
-          <option value="โรงแรม">ศูนย์การแพทย์มหาวิทยาลัยแม่ฟ้าหลวง</option>
-          <option value="โรงแรม">ศูนย์กีฬา</option>
-          <option value="โรงแรม">ศูนย์ภาษาและวัฒนธรรมจีนสิรินธร</option>
-          <option value="โรงแรม">สถาบันชาและกาแฟแห่งมหาวิทยาลัยแม่ฟ้าหลวง</option>
-          <option value="โรงแรม">โครงการสวนพฤกษศาสตร์มหาวิทยาลัยแม่ฟ้าหลวงเฉลิมพระเกียรติ 80 พรรษา</option>
+          <option value="ตลาดฟ้าไทย">ตลาดฟ้าไทย</option>
+          <option value="อู่รถสมบัติทัวร์(นางแล)">อู่รถสมบัติทัวร์(นางแล)</option>
+          <option value="ห้าง Big C บ้านดู่เชียงราย">ห้าง Big C บ้านดู่เชียงราย</option>
+          <option value="ม.ราชภัฏเชียงราย">ม.ราชภัฏเชียงราย</option>
+          <option value="ห้าง เซ็ลทรัลเชียงราย">ห้าง เซ็ลทรัลเชียงราย</option>
+          <option value="เชียงรายไนท์บาร์ซาร์">เชียงรายไนท์บาร์ซาร์</option>
+          <option value="แม่จัน">แม่จัน</option>
+          <option value="อาคารเรียนรวม C5 (อาคารพลตำรวจเอกเภา สารสิน)">อาคารเรียนรวม C5</option>
+          <option value="อาคารปฏิบัติการ S">อาคารปฏิบัติการ S</option>
+          <option value="ศูนย์บรรณสารและสื่อการศึกษา (ห้องสมุด)">ศูนย์บรรณสารและสื่อการศึกษา (ห้องสมุด)</option>
+          <option value="หอพักลำดวน">หอพักลำดวน</option>
+          <option value="อาคารเรียน C1 ">อาคารเรียน C1 </option>
+          <option value="อาคารเรียน C2 ">อาคารเรียน C2 </option>
+          <option value="อาคารเรียน C3 ">อาคารเรียน C3</option>
+          <option value="อาคารเรียน C4">อาคารเรียน C4 หอประชุมสมเด็จย่า</option>
+          <option value="อาคารเรียน C5">อาคารเรียน C5</option>
+          <option value="อาคารโรงอาอาหาร D1">อาคารโรงอาอาหาร D1</option>
+          <option value="พิพิธภัณฑ์อารยธรรมลุ่มน้ำโขง D2">พิพิธภัณฑ์อารยธรรมลุ่มน้ำโขง D2</option>
+          <option value="อาคารสำนักงานวิชา E1">อาคารสำนักงานวิชา E1</option>
+          <option value="อาคารสำนักงานวิชา E2">อาคารสำนักงานวิชา E2</option>
+          <option value="อาคารสำนักงานวิชา E3">อาคารสำนักงานวิชา E3</option>
+          <option value="อาคารพลเอกสำเภา ชูศรี E4">อาคารพลเอกสำเภา ชูศรี E4</option>
+          <option value="อาคารปรีคลินิก M3">อาคารปรีคลินิก M3</option>
+          <option value="อาคาร M-Square">อาคาร M-Square</option>
         </select>
       </div>
       <div class="form-group">
         <label for="dropoff-location">เลือกจุดไปส่ง:</label>
         <select id="dropoff-location" name="dropoff-location" required>
           <option value="" disabled selected>เลือกจุดไปส่ง</option>
-          <option value="สถานีรถไฟ">ตลาดฟ้าไทย</option>
-          <option value="สนามบิน">ศูนย์การแพทย์มหาวิทยาลัยแม่ฟ้าหลวง</option>
-          <option value="โรงแรม">จุดขึ้นรถ (สมบัติทัวร์) นางแล</option>
-          <option value="โรงแรม">Big C บ้านดู่เชียงราย</option>
-          <option value="โรงแรม">เซ็นทรัลเชียงราย</option>
-          <option value="โรงแรม">เชียงรายไนท์บาร์ซาร์</option>
-          <option value="โรงแรม">วัดห้วยปลากั้ง</option>
-          <option value="โรงแรม">แม่จัน</option>
+          <option value="ตลาดฟ้าไทย">ตลาดฟ้าไทย</option>
+          <option value="อู่รถสมบัติทัวร์(นางแล)">อู่รถสมบัติทัวร์(นางแล)</option>
+          <option value="ห้าง Big C บ้านดู่เชียงราย">ห้าง Big C บ้านดู่เชียงราย</option>
+          <option value="ม.ราชภัฏเชียงราย">ม.ราชภัฏเชียงราย</option>
+          <option value="ห้าง เซ็ลทรัลเชียงราย">ห้าง เซ็ลทรัลเชียงราย</option>
+          <option value="เชียงรายไนท์บาร์ซาร์">เชียงรายไนท์บาร์ซาร์</option>
+          <option value="แม่จัน">แม่จัน</option>
+          <option value="อาคารเรียนรวม C5 (อาคารพลตำรวจเอกเภา สารสิน)">อาคารเรียนรวม C5</option>
+          <option value="อาคารปฏิบัติการ S">อาคารปฏิบัติการ S</option>
+          <option value="ศูนย์บรรณสารและสื่อการศึกษา (ห้องสมุด)">ศูนย์บรรณสารและสื่อการศึกษา (ห้องสมุด)</option>
+          <option value="หอพักลำดวน">หอพักลำดวน</option>
+          <option value="อาคารเรียน C1 ">อาคารเรียน C1 </option>
+          <option value="อาคารเรียน C2 ">อาคารเรียน C2 </option>
+          <option value="อาคารเรียน C3 ">อาคารเรียน C3</option>
+          <option value="อาคารเรียน C4">อาคารเรียน C4 หอประชุมสมเด็จย่า</option>
+          <option value="อาคารเรียน C5">อาคารเรียน C5</option>
+          <option value="อาคารโรงอาอาหาร D1">อาคารโรงอาอาหาร D1</option>
+          <option value="พิพิธภัณฑ์อารยธรรมลุ่มน้ำโขง D2">พิพิธภัณฑ์อารยธรรมลุ่มน้ำโขง D2</option>
+          <option value="อาคารสำนักงานวิชา E1">อาคารสำนักงานวิชา E1</option>
+          <option value="อาคารสำนักงานวิชา E2">อาคารสำนักงานวิชา E2</option>
+          <option value="อาคารสำนักงานวิชา E3">อาคารสำนักงานวิชา E3</option>
+          <option value="อาคารพลเอกสำเภา ชูศรี E4">อาคารพลเอกสำเภา ชูศรี E4</option>
+          <option value="อาคารปรีคลินิก M3">อาคารปรีคลินิก M3</option>
+          <option value="อาคาร M-Square">อาคาร M-Square</option>
         </select>
       </div>
       <div class="form-group">
@@ -68,9 +99,12 @@
         </select>
       </div>
       <div id="payment-info" class="hidden">
-        <p id="bank-info" class="hidden">หมายเลขบัญชี: 123-456-789<br>ชื่อบัญชี: บริการรถรับ-ส่ง
+        <p id="bank-info" class="hidden">ธนาคาร:ทหารไทยธนชาต หมายเลขบัญชี: 634-2-43188-6<br>ชื่อบัญชี: อัษฏาวุฒิ อุปนันท์<br></p>
         <p id="qr-info" class="hidden">QR Code:</p>
-        <img id="qr-code" src="qrcode.png" alt="QR Code" class="hidden">
+        <img id="qr-code" src="img/QRโค้ด.jpg" alt="QR Code" class="hidden">
+        <p>
+          หมายเลขพร้อมเพย์: 086-448-0221
+        </p>
       </div>
       <div class="form-group">
         <button type="button" id="call-car">เรียกรถเข้ารับ</button>

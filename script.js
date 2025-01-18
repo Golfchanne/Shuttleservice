@@ -1,5 +1,5 @@
-const token = "7989781918:AAEvVAOitRjpK-F1eLAtFrPv53nI7x_mjBA"; // ใส่ Token ของ Telegram Bot
-const chatId = "8047952744"; // ใส่ Chat ID ของคุณ
+const botToken = '7989781918:AAEvVAOitRjpK-F1eLAtFrPv53nI7x_mjBA';
+const chatId = '8047952744';
 
 document.getElementById('payment-method').addEventListener('change', function () {
   const paymentInfo = document.getElementById('payment-info');
@@ -22,44 +22,35 @@ document.getElementById('payment-method').addEventListener('change', function ()
   }
 });
 
+function sendToTelegram(data) {
+  const message = `
+ชื่อ: ${data.name}
+เบอร์โทร: ${data.phone}
+จุดไปรับ: ${data.pickup}
+จุดไปส่ง: ${data.dropoff}
+วันที่: ${data.date}
+เวลา: ${data.time}
+การชำระเงิน: ${data.payment}
+  `;
+  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId, text: message }),
+  });
+}
+
 document.getElementById('call-car').addEventListener('click', function () {
-  sendTelegramMessage('เรียกรถเข้ารับสำเร็จ');
+  const form = document.getElementById('booking-form');
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  sendToTelegram(data);
+  alert('การเรียกรถสำเร็จ!');
 });
 
 document.getElementById('booking-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  sendTelegramMessage('การจองรถสำเร็จ!');
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+  sendToTelegram(data);
+  alert('การจองรถสำเร็จ!');
 });
-
-function sendTelegramMessage(message) {
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
-  const pickup = document.getElementById('pickup-location').value;
-  const dropoff = document.getElementById('dropoff-location').value;
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
-  const payment = document.getElementById('payment-method').value;
-
-  const text = `
-  🚗 บริการรถรับ-ส่ง 🚗
-  ชื่อ: ${name}
-  เบอร์โทร: ${phone}
-  จุดไปรับ: ${pickup}
-  จุดไปส่ง: ${dropoff}
-  วันที่: ${date}
-  เวลา: ${time}
-  ช่องทางชำระเงิน: ${payment}
-  สถานะ: ${message}
-  `;
-
-  const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      alert('ส่งข้อมูลไปยัง Telegram สำเร็จ!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('เกิดข้อผิดพลาดในการส่งข้อมูล');
-    });
-}
