@@ -20,7 +20,7 @@ body {
 /* สไตล์สำหรับหน้าจอขนาดกลาง (เช่น Tablet) */
 @media (min-width: 768px) and (max-width: 1199px) {
   body {
-    background-color: #e0e0e0;
+    background-color: #ffbb00;
   }
 
   .container {
@@ -32,7 +32,7 @@ body {
 /* สไตล์สำหรับหน้าจอขนาดเล็ก (เช่น Smartphone) */
 @media (max-width: 767px) {
   body {
-    background-color: #d0d0d0;
+    background-color: #ffbb00;
   }
 
   .container {
@@ -41,19 +41,10 @@ body {
   }
 }
 
-/* สไตล์สำหรับหน้าจอขนาดเล็กมาก (เช่นมือถือรุ่นเล็ก) */
-@media (max-width: 480px) {
-  body {
-    background-color: #c0c0c0;
-  }
 
-  .container {
-    padding: 10px;
-  }
-}
   
   .container {
-    max-width: 600px;
+    max-width: 1920px;
     margin: 20px auto;
     background: #fff;
     padding: 20px;
