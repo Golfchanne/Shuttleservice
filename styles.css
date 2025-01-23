@@ -4,49 +4,11 @@ body {
     margin: 0;
     padding: 0;
   }
-
-/* สไตล์สำหรับหน้าจอขนาดใหญ่ (เช่น Desktop) */
-@media (min-width: 1300px) {
-  body {
-    background-color: #f0f0f0;
-  }
-
-  .container {
-    width: 80%;
-    margin: auto;
-  }
-}
-
-/* สไตล์สำหรับหน้าจอขนาดกลาง (เช่น Tablet) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  body {
-    background-color: #ffbb00;
-  }
-
-  .container {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-/* สไตล์สำหรับหน้าจอขนาดเล็ก (เช่น Smartphone) */
-@media (max-width: 767px) {
-  body {
-    background-color: #ffbb00;
-  }
-
-  .container {
-    width: 95%;
-    margin: auto;
-  }
-}
-
-
   
   .container {
-    max-width: 1920px;
+    max-width: 600px;
     margin: 20px auto;
-    background: #fff;
+    background: #f3e884;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
